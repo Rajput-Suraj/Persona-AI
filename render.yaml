@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: persona-ai-chat
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: OPENAI_API_KEY
+        sync: false
